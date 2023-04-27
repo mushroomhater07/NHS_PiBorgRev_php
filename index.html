@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>index</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="formscript.js"></script>
+</head>
+<body>
+  <!-- this is from flask -->
+  <div class="main" id="newpost">
+    <img  class="camera-bg" style="width: 100%; height:80%; background-attachment: fixed;" id="bg" class="center" src="{{ url_for('video_feed') }}">
+    <!--<img  class="camera-bg" style="width: 100%; height:80%; background-attachment: fixed;" id="bg" class="center" src="https://www.psdbox.com/wp-content/uploads/2011/01/security-camera-photoshop-effect.jpg">-->
+  
+  </div>
+  <!-- form start here -->
+  <form id="carform" name="form">
+    <table width="100%" border="1">
+      <tbody>
+          <tr>
+              <td colspan="2">PicoBorg Reverse<br> Control Panel</td>
+          </tr>
+          <tr>
+              <td colspan="2">Currently:<p id="current"></p><br>
+              </td>
+          </tr>
+          <tr>
+              <td> <input type="submit" class="btn btn-info" value="Forward" onclick="submit1('for1')"> </td> <!-- name : use for php post--> 
+              <td> <input type="submit" class="btn btn-info" value="Anti-clockwise" onclick="submit1('anti')"> </td>
+          </tr>
+          <tr>
+              <td> <input type="submit" class="btn btn-info" value="Backward" onclick="submit1('back')"> </td>
+              <td> <input type="submit" class="btn btn-info" value="Clockwise" onclick="submit1('clock')"> </td>
+          </tr>
+          <tr>
+              <td colspan="2"> <input type="submit" class="btn btn-danger" value="Handbrake" onclick="submit1('stop')"> </td>
+          </tr>
+      </tbody>
+    </table>
+  </form>
+</body>
+</html>  
